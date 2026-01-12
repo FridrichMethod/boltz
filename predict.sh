@@ -18,7 +18,7 @@ boltz predict "$1" \
     --override \
     --recycling_steps 3 \
     --subsample_msa \
-    --use_msa_server \
     --use_potentials \
     --write_full_pae \
     --write_full_pde
+    # --use_msa_server \
