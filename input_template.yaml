@@ -1,0 +1,16 @@
+sequences:
+  - protein:
+      id: A
+      sequence: STLRLLISDSHDPWFNLAVEECIFRQMPATQRVLFLVRNADTVVIGRNQNPWKECNIRRMEEDNVRLARRSSGGGAVFHDLGNTCFTFMAGKPEYDKTISTSIVLNALNALGVSAEASGRNDLVVKTVEGDRKVSGSAYRETKDRGLHHGTLLLNADLSRLANYLNPDKKKLAAKGITSVRSRVTNLTELLPGITHEQVCEAITEAFFAHYGERVEAEIISPNETPDLPNFAETFARQSSWEWNFGQSPAFSHLLDERFTWGGVELRFDVEKGHITRAQVFTDSLNPAPLEALAGRLQGCLYRADELQQECEALLVDFPEQEKELRELSAWMAGAVR
+  - ligand:
+      id: B
+      smiles: "O=C(OP(OC[C@H]1O[C@H]([C@@H]([C@@H]1O)O)n2c3ncnc(N)c3nc2)([O-])=O)CCCCCCCC#C"
+templates:
+  - cif: /home/fridrichmethod/data/repos/boltz/pdbs/3a7r.cif
+    force: true # optional, if force is set to true (default is false), a potential will be used to enforce the template
+    threshold: 2.0 # optional, controls the distance (in Angstroms) that the prediction can deviate from the template
+    chain_id: [A] # can be more than one
+    template_id: [A]
+properties:
+  - affinity:
+      binder: B
