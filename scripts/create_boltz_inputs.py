@@ -30,13 +30,13 @@ with Path(SEQUENCES_FILE).open() as f:
         if not line:
             continue
         if line.startswith(">"):
-            if current_name:
+            if current_name is not None:
                 sequences[current_name] = "".join(current_seq)
             current_name = line[1:]
             current_seq = []
         else:
             current_seq.append(line)
-    if current_name:
+    if current_name is not None:
         sequences[current_name] = "".join(current_seq)
 print(sequences)
 
@@ -70,7 +70,7 @@ for seq_name, seq_data in sequences.items():
 
             # Update MSA
             # Check if MSA exists
-            msa_filename = f"{seq_name.lower()}.a3m"
+            msa_filename = f"{seq_name}.csv"
             msa_path = os.path.join(MSAS_DIR, msa_filename)
             assert Path(msa_path).exists(), f"MSA not found for {seq_name} at {msa_path}"
             config["sequences"][0]["protein"]["msa"] = msa_path
