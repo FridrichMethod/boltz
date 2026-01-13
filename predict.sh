@@ -15,10 +15,10 @@ boltz predict "$1" \
     --num_subsampled_msa 1024 \
     --num_workers 4 \
     --output_format pdb \
-    --override \
     --recycling_steps 3 \
     --subsample_msa \
     --use_potentials \
     --write_full_pae \
     --write_full_pde
+    # --override \
     # --use_msa_server \
