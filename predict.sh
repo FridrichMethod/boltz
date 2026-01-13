@@ -19,14 +19,14 @@ boltz predict "$1" \
     --diffusion_samples_affinity 10 \
     --max_msa_seqs 4096 \
     --max_parallel_samples 10 \
-    --num_subsampled_msa 1024 \
     --num_workers 4 \
     --output_format pdb \
     --preprocessing-threads "$(nproc)" \
     --recycling_steps 3 \
-    --subsample_msa \
     --use_potentials \
     --write_full_pae \
     --write_full_pde
+# --num_subsampled_msa 1024 \
 # --override \
+# --subsample_msa \
 # --use_msa_server \
