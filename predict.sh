@@ -17,7 +17,6 @@ boltz predict "$1" \
     --devices 1 \
     --diffusion_samples 10 \
     --diffusion_samples_affinity 10 \
-    --max_msa_seqs 4096 \
     --max_parallel_samples 10 \
     --num_workers 4 \
     --output_format pdb \
@@ -26,6 +25,7 @@ boltz predict "$1" \
     --use_potentials \
     --write_full_pae \
     --write_full_pde
+# --max_msa_seqs 4096 \
 # --num_subsampled_msa 1024 \
 # --override \
 # --subsample_msa \
